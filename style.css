@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    color: #333;
+    justify-content: space-between; /* Permet de distribuer l'espace verticalement */
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1.5em;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.3em;
+}
+
+header p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Section avec l'image */
+#imageSection {
+    text-align: center;
+    margin-top: 2em;
+}
+
+#image {
+    width: 80%; /* L'image prend 80% de la largeur du conteneur */
+    max-width: 800px; /* Limite la largeur de l'image */
+    height: auto; /* Conserve le ratio de l'image */
+    border-radius: 10px; /* Bordure arrondie pour un effet plus esthétique */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce sous l'image */
+}
+
+main {
+    flex: 1;
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: #4CAF50;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+/* Section de partage du lien */
+#share {
+    text-align: center;
+    margin-top: 2em;
+}
+
+button#copyButton {
+    padding: 0.7em 1.5em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#copyButton:hover {
+    background-color: #45a049;
+}
+
+#copyMessage {
+    display: none;
+    color: green;
+    margin-top: 10px;
+}
+
+/* Nouveau style pour centrer le formulaire en largeur et le placer en bas */
+#formSection {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: flex-end; /* Aligne l'iframe en bas de la page */
+    margin-top: 2em; /* Espacement entre le formulaire et les autres sections */
+    flex-grow: 1; /* Permet de pousser le formulaire vers le bas */
+}
+
+iframe {
+    width: 640px;
+    height: 1972px;
+    border: none;
+}
+
+/* Responsiveness : les largeurs s'ajustent selon la taille de l'écran */
+@media (max-width: 960px) {
+    /* For a screen < 960px, this CSS will be read */
+    iframe {
+        width: 80%; /* Reduit la largeur de l'iframe */
+    }
+}
+
+@media (max-width: 720px) {
+    /* For a screen < 720px, this CSS will be read */
+    iframe {
+        width: 90%; /* Reduit encore plus la largeur de l'iframe */
+    }
+}
+
+@media (max-width: 540px) {
+    /* For a screen < 540px, this CSS will be read */
+    iframe {
+        width: 100%; /* L'iframe occupe toute la largeur disponible sur les petits écrans */
+    }
+}
